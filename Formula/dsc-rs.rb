@@ -1,25 +1,25 @@
 class DscRs < Formula
   desc "Discourse CLI tool for managing multiple Discourse forums: track installs, run upgrades over SSH, manage emojis, sync topics and categories as Markdown, and more."
   homepage "https://github.com/pacharanero/dsc"
-  version "0.10.9"
+  version "0.10.10"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.9/dsc-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "af6883841d05f075ceed24c4bdc87b2a65f8c4249d8bd5a7919219242c5ab83d"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.10/dsc-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "6e4e67da0fec0231bd39c6650323556de239174ce7cd1254a767a2fdc3195f3e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.9/dsc-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "db0c63ce0a7200a5943606ecf26d09115fd2ebca250fd2d44c33c18c88e901b6"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.10/dsc-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "aa79498fc6ea1d9c65cf820b959e26a661cfa48cda2e52eb19214577edd20c0e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.9/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6290d1a26b3a243e0e0bb66cd74b8558261fc5e2b7102247ab16c2afb43e7021"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.10/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "551f23efd8ea10c0ebc69b1ba6ce556eef63cc957a3ba358306ebbce43c25274"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.9/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e10e95d35938e46d2793bb04a6eff6a32051c7f9caa5f84ff2f5998bfee1a89f"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.10/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4f2b7c4d036bae9e75a797cee0ff5cc21bbe3ae68a5757fd3c0fa5d94f460713"
     end
   end
   license "MIT"
