@@ -1,25 +1,25 @@
 class DscRs < Formula
   desc "Discourse CLI tool for managing multiple Discourse forums: track installs, run upgrades over SSH, manage emojis, sync topics and categories as Markdown, and more."
   homepage "https://github.com/pacharanero/dsc"
-  version "0.10.3"
+  version "0.10.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.3/dsc-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "e874af0acf161c0b94cbe6ce340f0a98262783a5eff02b6900f77ca028ded48f"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.9/dsc-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "af6883841d05f075ceed24c4bdc87b2a65f8c4249d8bd5a7919219242c5ab83d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.3/dsc-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "e20ede08b495058afacd6e9384aee0637a14e6982827c6e034f2af21014ae940"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.9/dsc-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "db0c63ce0a7200a5943606ecf26d09115fd2ebca250fd2d44c33c18c88e901b6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.3/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "053dc29a6fd7c0d99d9b1bb6ada747a6fbe6e40ab5d27f66cd2f4ed14c9648d4"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.9/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6290d1a26b3a243e0e0bb66cd74b8558261fc5e2b7102247ab16c2afb43e7021"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.3/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6322850ef46e263e5fdb3deccd4e0473c18369d62078811d53ce3a4b9381d097"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.9/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e10e95d35938e46d2793bb04a6eff6a32051c7f9caa5f84ff2f5998bfee1a89f"
     end
   end
   license "MIT"
