@@ -1,25 +1,25 @@
 class Clincalc < Formula
-  desc "Open, auditable clinical calculators: a pure scoring engine plus the `calc` CLI in one crate. The engine is a serde-only leaf (build with default-features = false); the default `cli` feature adds the `calc` binary."
-  homepage "https://github.com/pacharanero/calc"
-  version "0.2.0"
+  desc "Open, auditable clinical calculators: a pure scoring engine plus the `clincalc` CLI in one crate. The engine is a serde-only leaf (build with default-features = false); the default `cli` feature adds the `clincalc` binary."
+  homepage "https://github.com/pacharanero/clincalc"
+  version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/calc/releases/download/v0.2.0/clincalc-aarch64-apple-darwin.tar.xz"
-      sha256 "7447ab8b66fd2bd75433ef38d8f65f0e454aff6a8a38978f9ba45eee77ec8406"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.1/clincalc-aarch64-apple-darwin.tar.xz"
+      sha256 "9c808124ac53d2ce967e4fb198b6c0ab1f727f036fc29cedaab0535050d3d19e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/calc/releases/download/v0.2.0/clincalc-x86_64-apple-darwin.tar.xz"
-      sha256 "f25ae68f34312eb7800aef3647bbecd4ff600412a5be4eb0b61e560f08e443fd"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.1/clincalc-x86_64-apple-darwin.tar.xz"
+      sha256 "b06c4576e6745afc105b90bae58c36760d44c7ff2f141ff4a93eb5a4dba33025"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/calc/releases/download/v0.2.0/clincalc-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ab52d84361898785b65295ffc63305db5db4157fbeeda82f7782acbaac9df132"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.1/clincalc-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3b95d4d02ed6cad11af6c28a1d388b23e4cd0475776b1073f0c0bc5e86a54f8b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/calc/releases/download/v0.2.0/clincalc-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1b0a2d3dde33c1859069ae3171a343414f2d5843f2473c334441a963fea17c2d"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.1/clincalc-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "54768bd852ddf443d02a885a3814c48d4bcb8aba5e2d7b19d49c828e6fca6209"
     end
   end
   license "AGPL-3.0-or-later"
@@ -48,10 +48,10 @@ class Clincalc < Formula
   end
 
   def install
-    bin.install "calc" if OS.mac? && Hardware::CPU.arm?
-    bin.install "calc" if OS.mac? && Hardware::CPU.intel?
-    bin.install "calc" if OS.linux? && Hardware::CPU.arm?
-    bin.install "calc" if OS.linux? && Hardware::CPU.intel?
+    bin.install "clincalc" if OS.mac? && Hardware::CPU.arm?
+    bin.install "clincalc" if OS.mac? && Hardware::CPU.intel?
+    bin.install "clincalc" if OS.linux? && Hardware::CPU.arm?
+    bin.install "clincalc" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
