@@ -1,26 +1,26 @@
 class Sct < Formula
   desc "Local-first SNOMED CT toolchain: RF2 → NDJSON, SQLite, Parquet, embeddings, MCP server"
   homepage "https://github.com/pacharanero/sct"
-  version "0.18.6"
+  version "0.18.7"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/pacharanero/sct/releases/download/v#{version}/sct-macos-aarch64.tar.gz"
-      sha256 "7cfeb9fbce5e97a5b679396431da5b6a4dfa32893d4dcb5d212bc7cfe8a3e98b"
+      sha256 "1f384e7ff2168cc4fe35042e0d4f420cfa694a70d3958def8feef5ce47140594"
     else
       url "https://github.com/pacharanero/sct/releases/download/v#{version}/sct-macos-x86_64.tar.gz"
-      sha256 "d165d373b36888d8ce85a592a42d330f33297cc17d767b87062bcc6e78fee167"
+      sha256 "2e4c8eed142250f351c8f161f96a16a8dcb645acb5973ce10eb54f86c1f58721"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/pacharanero/sct/releases/download/v#{version}/sct-linux-aarch64.tar.gz"
-      sha256 "4c75b823dcfce65ddc115c9c83de086f29f31b5bf7bf976aec0cbcc047fb7a34"
+      sha256 "ef6d0de863c8ec529c99a5c4f7cb2263b25a1a6a51b731c9eca039d4196c1740"
     else
       url "https://github.com/pacharanero/sct/releases/download/v#{version}/sct-linux-x86_64.tar.gz"
-      sha256 "7ca3fdfa02e0bd40d6d4aa6273e0a9f143058281fcdbf6040ea108b45b6cb2ca"
+      sha256 "ee8447f8c9999785f1f6ce2f38eb574fae9decb0a006d7f83e0f92614a471195"
     end
   end
 
