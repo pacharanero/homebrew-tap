@@ -13,3 +13,4 @@ brew install <formula>
 
 - [`dsc`](https://github.com/pacharanero/dsc) — Discourse CLI (installed binary is `dsc`; crate name is `dsc-rs`).
 - [`sct`](https://github.com/pacharanero/sct) — Local-first SNOMED CT toolchain.
+- [`gitehr`](https://github.com/gitehr/gitehr) — Git-based electronic health record CLI.
