@@ -1,25 +1,25 @@
 class Clincalc < Formula
   desc "Open, auditable clinical calculators: a pure scoring engine plus the `clincalc` CLI in one crate. The engine is a serde-only leaf (build with default-features = false); the default `cli` feature adds the `clincalc` binary."
   homepage "https://github.com/pacharanero/clincalc"
-  version "0.2.1"
+  version "0.2.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.1/clincalc-aarch64-apple-darwin.tar.xz"
-      sha256 "9c808124ac53d2ce967e4fb198b6c0ab1f727f036fc29cedaab0535050d3d19e"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.2/clincalc-aarch64-apple-darwin.tar.xz"
+      sha256 "164355e217d1a9698ab905276027db139751e5a28a7475e53dd138e363c4a0dd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.1/clincalc-x86_64-apple-darwin.tar.xz"
-      sha256 "b06c4576e6745afc105b90bae58c36760d44c7ff2f141ff4a93eb5a4dba33025"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.2/clincalc-x86_64-apple-darwin.tar.xz"
+      sha256 "2d464c12f630aad2eaf78580c5dc16f0b69a822cf8a193661b785fe2757aab4b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.1/clincalc-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3b95d4d02ed6cad11af6c28a1d388b23e4cd0475776b1073f0c0bc5e86a54f8b"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.2/clincalc-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "019b8f6e11740f5b7881f3d3c26f4a1a8afada120d0a54ae0658c2496bfc7e42"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.1/clincalc-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "54768bd852ddf443d02a885a3814c48d4bcb8aba5e2d7b19d49c828e6fca6209"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.2.2/clincalc-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c995cb7843fed261faf1218a023eb8e1b2c8c7eaab40871055c5ff75699d9808"
     end
   end
   license "AGPL-3.0-or-later"
