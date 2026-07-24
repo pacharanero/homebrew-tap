@@ -1,25 +1,25 @@
 class DscRs < Formula
   desc "Discourse CLI tool for managing multiple Discourse forums: track installs, run upgrades over SSH, manage emojis, sync topics and categories as Markdown, and more."
   homepage "https://github.com/pacharanero/dsc"
-  version "0.10.31"
+  version "0.10.32"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.31/dsc-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "317961c61d5471ce086ae831759db0fd8a8a10fcd1265ea46acce4a72efbf9cc"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.32/dsc-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "506217a71555d1aed4a5a54777f366a6c58d8870614b7077ddb7fa0a059ed06f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.31/dsc-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "aba07462bb3ba1b3574d190187868814f253d10c5b682d3fbc941de75c9a2775"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.32/dsc-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "9d3a610699f63ea95bbd4cd12ca954b65add9bff9e88de31eedcc802b1582ab6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.31/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e166b7e79fff2951d390aeb6c2d4bbd4b779e8789e5b46b777ebabcabdc5fb2b"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.32/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d2c08f4cabbc35e6b4233eb01d5413752c868fe823bd9fa4af1314ae39c3b339"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.10.31/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f927779e3285e410a4d7762ee4fd1276eded4b2c583448dce135693bdb048b78"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.10.32/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "47c03be2934bf3d6be58ffcccd8ee3fda346ecc919c5ff54ebdb76331b58dd25"
     end
   end
   license "MIT"
