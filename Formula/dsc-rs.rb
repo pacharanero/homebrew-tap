@@ -1,36 +1,36 @@
 class DscRs < Formula
   desc "Discourse CLI tool for managing multiple Discourse forums: track installs, run upgrades over SSH, manage emojis, sync topics and categories as Markdown, and more."
   homepage "https://github.com/pacharanero/dsc"
-  version "0.12.0"
+  version "0.12.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.12.0/dsc-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "4ed1611cf04eed13b510e2f7b9649c8a8e7843e7ef742cc65d5578f5ef4852a2"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.12.1/dsc-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "927d73d57139cd1cd36e3cea595955270d7e6d2041fcdb90d82deff5178be3b8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.12.0/dsc-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "6d7c7f7252870c258ed75254058c5d377a7a6cfbb37764a9b18e14b6d014a9d9"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.12.1/dsc-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "dc9b45acae780ee26d001a35242855ffce77471f8d3c0fada0f00088b8a11e11"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.12.0/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e5394c0d1a4092333fd5314ef3e9d833fa44f291c9a2cb667a771b09857fe48e"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.12.1/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "84cdce8fe1f2cdab9985064afcf7078342893c30a2d261cab17c460781678395"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.12.0/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c46208605c78fbddbbacb69421e0cd05afbcc0d0b1f1974c9fc2286c30b905eb"
+      url "https://github.com/pacharanero/dsc/releases/download/v0.12.1/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "190551672befdf425318820b7d89deb5097070d7bef6a7ea8d87cbafb7c48f46"
     end
   end
   license "GPL-2.0-or-later"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
+    "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {}
-  }
+    "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -48,18 +48,10 @@ class DscRs < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "dsc"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "dsc"
-    end
-    if OS.linux? && Hardware::CPU.arm?
-      bin.install "dsc"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "dsc"
-    end
+    bin.install "dsc" if OS.mac? && Hardware::CPU.arm?
+    bin.install "dsc" if OS.mac? && Hardware::CPU.intel?
+    bin.install "dsc" if OS.linux? && Hardware::CPU.arm?
+    bin.install "dsc" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
