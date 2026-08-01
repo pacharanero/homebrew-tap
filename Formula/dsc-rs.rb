@@ -1,25 +1,25 @@
 class DscRs < Formula
   desc "Discourse CLI tool for managing multiple Discourse forums: track installs, run upgrades over SSH, manage emojis, sync topics and categories as Markdown, and more."
-  homepage "https://github.com/pacharanero/dsc"
-  version "0.12.1"
+  homepage "https://github.com/koloki-co/dsc"
+  version "0.13.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.12.1/dsc-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "927d73d57139cd1cd36e3cea595955270d7e6d2041fcdb90d82deff5178be3b8"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.13.0/dsc-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "c5d2ae357fc710e30208917dc966c78715b8dbd856787911672076a83cf1009f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.12.1/dsc-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "dc9b45acae780ee26d001a35242855ffce77471f8d3c0fada0f00088b8a11e11"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.13.0/dsc-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "879af6148effa2570e37bbe503084ea47f9a5e66c98de83b0d7c9d1f9d7b53d9"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.12.1/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "84cdce8fe1f2cdab9985064afcf7078342893c30a2d261cab17c460781678395"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.13.0/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1bae36d2a54e42e88206be4736b198c604e3486e2b2b934c34773cf3b2a3a3c5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/dsc/releases/download/v0.12.1/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "190551672befdf425318820b7d89deb5097070d7bef6a7ea8d87cbafb7c48f46"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.13.0/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "90da806af7f3ee72333a4a9b462e7303440864bc59e7be33c65479b1ed5b7633"
     end
   end
   license "GPL-2.0-or-later"
