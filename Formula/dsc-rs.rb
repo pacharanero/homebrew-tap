@@ -1,25 +1,25 @@
 class DscRs < Formula
   desc "Discourse CLI tool for managing multiple Discourse forums: track installs, run upgrades over SSH, manage emojis, sync topics and categories as Markdown, and more."
   homepage "https://github.com/koloki-co/dsc"
-  version "0.13.1"
+  version "0.14.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/koloki-co/dsc/releases/download/v0.13.1/dsc-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "769f0e5ad09bef9ad4690c4c06d4df800d7e871a9746f8cea23f7e4549aadced"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.14.0/dsc-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "66de4603620509ec609aa6325a5ac0ee84c9a759fd1f1447ee9f1d09ecbed803"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koloki-co/dsc/releases/download/v0.13.1/dsc-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "35adcbf7426193861fc1b9fa6a7acab46e93dc55dd9be626e920cb63427109fe"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.14.0/dsc-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "e7801e242bae59938ae3adbb4041858b428d57ca60c59bb1ea0b9a180611ac57"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/koloki-co/dsc/releases/download/v0.13.1/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1ac4c80f89d9a17b87bb35e622bf5e68608fa42f9252df679aba9e6be29599c7"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.14.0/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b02d5e87078da6a2b886566fba02763da870e26078099eef25ac8a4864325337"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koloki-co/dsc/releases/download/v0.13.1/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e15d757ea78a7fe986a8f07a7ca8bcbeb06f01792cf66b1fcbb2562383f0f0e5"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.14.0/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d10cb424c071e9e34f780cfe04c5374240320108353308df9c573a40112393a7"
     end
   end
   license "GPL-2.0-or-later"
