@@ -1,25 +1,25 @@
 class DscRs < Formula
   desc "Discourse CLI tool for managing multiple Discourse forums: track installs, run upgrades over SSH, manage emojis, sync topics and categories as Markdown, and more."
   homepage "https://github.com/koloki-co/dsc"
-  version "0.14.0"
+  version "0.15.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/koloki-co/dsc/releases/download/v0.14.0/dsc-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "66de4603620509ec609aa6325a5ac0ee84c9a759fd1f1447ee9f1d09ecbed803"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.15.0/dsc-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "4691b64fd27fc6f62338a6cc6d076dad89797cc6bb11cd3123829da2981ff2fa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koloki-co/dsc/releases/download/v0.14.0/dsc-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "e7801e242bae59938ae3adbb4041858b428d57ca60c59bb1ea0b9a180611ac57"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.15.0/dsc-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "cb4d4e4dcf0360a70310fc20c32d624067c564b5ccbebef7aa0216318ab308dd"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/koloki-co/dsc/releases/download/v0.14.0/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b02d5e87078da6a2b886566fba02763da870e26078099eef25ac8a4864325337"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.15.0/dsc-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "342fecc9f32c5e621b793d8f5136bd754008981cd092a468ce60dbca273b7a6f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koloki-co/dsc/releases/download/v0.14.0/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d10cb424c071e9e34f780cfe04c5374240320108353308df9c573a40112393a7"
+      url "https://github.com/koloki-co/dsc/releases/download/v0.15.0/dsc-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2f26ba31f4325c2569f3b10ce9eb2aeb899e6962faf29cfdf8d5d432c4f4f8a6"
     end
   end
   license "GPL-2.0-or-later"
@@ -48,10 +48,18 @@ class DscRs < Formula
   end
 
   def install
-    bin.install "dsc" if OS.mac? && Hardware::CPU.arm?
-    bin.install "dsc" if OS.mac? && Hardware::CPU.intel?
-    bin.install "dsc" if OS.linux? && Hardware::CPU.arm?
-    bin.install "dsc" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "dsc"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "dsc"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "dsc"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "dsc"
+    end
 
     install_binary_aliases!
 
