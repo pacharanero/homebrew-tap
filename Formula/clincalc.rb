@@ -1,25 +1,25 @@
 class Clincalc < Formula
   desc "Open, auditable clinical calculators: a serde-only scoring engine plus the `clincalc` CLI and loopback REST API in one crate."
   homepage "https://github.com/pacharanero/clincalc"
-  version "0.3.4"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/clincalc/releases/download/v0.3.4/clincalc-aarch64-apple-darwin.tar.xz"
-      sha256 "01ffb70aca530cd932a38da01ebfb6a0e4ff95350bbb3abfb9cd5a9f0d2fa120"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.4.0/clincalc-aarch64-apple-darwin.tar.xz"
+      sha256 "17738dfafd20cd6c547ed66d5ecdec34eda7114010e4f87a7fa42b69be08cc51"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/clincalc/releases/download/v0.3.4/clincalc-x86_64-apple-darwin.tar.xz"
-      sha256 "a83780ba009f1c6446c260a8288984a924323a01fb9247364f05e15202699543"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.4.0/clincalc-x86_64-apple-darwin.tar.xz"
+      sha256 "fbd655e6257e1c76ff87c01183ad0bd574dc0d393419db5cee204e4f8d78f1c5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pacharanero/clincalc/releases/download/v0.3.4/clincalc-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0dbeff1b2ecd03ad8797f19575e54cb7162c8f556c87ba43087255ab32cc4800"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.4.0/clincalc-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4f8cd233894292a470ec1b5452001688a2b888fe4efa6442fc76cc270737382f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pacharanero/clincalc/releases/download/v0.3.4/clincalc-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ff87fd30612a2e52c0c0ae55ca29a1386fbd8f97e4213e0bfa7610eaec7cf90c"
+      url "https://github.com/pacharanero/clincalc/releases/download/v0.4.0/clincalc-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b52668375edf3cecd1ddf9484ca1f1c258cd7aa94f4d6dda9b6f92d39ea6b6b2"
     end
   end
   license all_of: ["AGPL-3.0-or-later", "LGPL-3.0-or-later"]
