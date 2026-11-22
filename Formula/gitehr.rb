@@ -1,25 +1,25 @@
 class Gitehr < Formula
   desc "A Git-based Electronic Health Record system - CLI tool"
   homepage "https://gitehr.org"
-  version "0.4.1"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gitehr/gitehr/releases/download/v0.4.1/gitehr-aarch64-apple-darwin.tar.xz"
-      sha256 "f9dc915e4aeead0947589927a0df910fa640ad37c511eebc39610a6de3dc87ee"
+      url "https://github.com/gitehr/gitehr/releases/download/v0.5.0/gitehr-aarch64-apple-darwin.tar.xz"
+      sha256 "abe24422cef91811355f91211ce0211c65706fa0b1095125a765fe8092ee965b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gitehr/gitehr/releases/download/v0.4.1/gitehr-x86_64-apple-darwin.tar.xz"
-      sha256 "3ea922cc92243992a49e816aaa2a97dcf3a3bd1f5b5457bc80b318e3d1935320"
+      url "https://github.com/gitehr/gitehr/releases/download/v0.5.0/gitehr-x86_64-apple-darwin.tar.xz"
+      sha256 "1cd93ffdf686e6fecb40ffcfcd0cb481a298221b66dcbc0c0d66614edcc97709"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gitehr/gitehr/releases/download/v0.4.1/gitehr-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "73da4e50e70d745b6f00b30533597f787b1d31b19560123be3e1d5d4f028e61a"
+      url "https://github.com/gitehr/gitehr/releases/download/v0.5.0/gitehr-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "26b8319bf153cadbb3cf093e222e8beeb57da355e772824ff9d6d4f3bd55fcab"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gitehr/gitehr/releases/download/v0.4.1/gitehr-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ed00d6365225648f78ae79b40641007d1f522a8d969a21dc2f83358e7ab82c24"
+      url "https://github.com/gitehr/gitehr/releases/download/v0.5.0/gitehr-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8c427f825fb94d4b6c449dbb809e404e12387f441ddced8fcc6c672b788e2f54"
     end
   end
   license "AGPL-3.0-or-later"
